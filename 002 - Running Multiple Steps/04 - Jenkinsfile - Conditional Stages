@@ -12,13 +12,13 @@ pipeline {
     	stage ('BUILD'){
 		when { environment name: 'CHOICE', value: 'BUILD' }
 		steps{
-		echo '$CHOICE'
+		echo $CHOICE
 		}
 	}
 	stage ('TEST'){
 		when { environment name: 'CHOICE', value: 'TEST' }
 		steps{
-		echo '$CHOICE'
+		echo $CHOICE
 		}
 	}
     }
