@@ -1,9 +1,12 @@
 pipeline {
+    parameters { string(name: 'NAME', description: 'Name:') }
+    parameters { string(name: 'AGE', description: 'Age:') }
+    
     agent { 
 		docker { 
 			image 'alpine:latest' 
 		}
-	}
+    }
     stages {
         stage('build') {
             steps {
