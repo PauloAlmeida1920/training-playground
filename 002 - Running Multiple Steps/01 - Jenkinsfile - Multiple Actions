@@ -1,9 +1,22 @@
+def repeat(){
+	sh 'date >> text.txt'
+}
+
+
+
 pipeline {
-    agent { 
-		docker { 
-			image 'alpine:latest' 
+	agent {
+		docker {
+			image 'alpine:latest'
 		}
 	}
-    stages {
-    }
+	stages {
+		stage('build') {
+			steps {
+				repeat()
+				sh 'sleep 10s'
+				repeat()
+			}
+		}
+	}
 }
