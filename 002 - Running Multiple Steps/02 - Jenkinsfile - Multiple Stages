@@ -5,5 +5,17 @@ pipeline {
 		}
 	}
     stages {
+    	stage('build') {
+		steps {
+			repeat()
+			sh 'sleep 10s'
+			repeat()
+		}
+	}	
     }
+}
+
+
+def repeat(){
+sh 'date >> text.txt'
 }
