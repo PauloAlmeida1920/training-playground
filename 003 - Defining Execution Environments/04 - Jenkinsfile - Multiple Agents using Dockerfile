@@ -9,7 +9,7 @@ pipeline {
 					dir '003 - Defining Execution Environments'
 				}
 			}
-			step{
+			steps{
 				echo 'Hello Maven'
 				sh 'mvn --version'
 			}
@@ -21,7 +21,7 @@ pipeline {
 					dir '003 - Defining Execution Environments'
 				}
 			}
-			step{
+			steps{
 				echo 'Hello NPM'
 				sh 'npm --version'
 			}
