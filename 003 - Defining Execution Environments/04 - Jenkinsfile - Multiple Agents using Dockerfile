@@ -8,10 +8,10 @@ pipeline {
 					filename '04 - Maven_Dockerfile - Multiple Agents using Dockerfile'
 					dir '003 - Defining Execution Environments'
 				}
-				step{
-					echo 'Hello Maven'
-					sh 'mvn --version'
-				}
+			}
+			step{
+				echo 'Hello Maven'
+				sh 'mvn --version'
 			}
 		}
 		stage('Example NPM'){
@@ -20,10 +20,10 @@ pipeline {
 					filename '04 - NPM_Dockerfile - Multiple Agents using Dockerfile'
 					dir '003 - Defining Execution Environments'
 				}
-				step{
-					echo 'Hello NPM'
-					sh 'npm --version'
-				}
+			}
+			step{
+				echo 'Hello NPM'
+				sh 'npm --version'
 			}
 		}
 	}
