@@ -1,7 +1,7 @@
 pipeline {
     agent { 
     	dockerfile {
-        filename '02 - Dockerfile - Dockerfile'
+        filename '02 - Jenkinsfile - Dockerfile Agent'
         dir '003 - Defining Execution Environments'
 //        label 'my-defined-label'
         additionalBuildArgs  '--build-arg "$ENV_VARIABLE" = "Value for build"'
