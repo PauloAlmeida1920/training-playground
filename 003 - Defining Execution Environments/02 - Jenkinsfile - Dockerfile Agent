@@ -1,10 +1,17 @@
 pipeline {
     agent { 
+    	dockerfile {
+        filename '02 - Dockerfile - Dockerfile'
+        dir '003 - Defining Execution Environments/02 - Dockerfile - Dockerfile Agent'
+//        label 'my-defined-label'
+        additionalBuildArgs  '--build-arg "$ENV_VARIABLE" = "Value for execution"'
+//        args '-v /tmp:/tmp'
+    }
 	}
     stages {
         stage('build') {
             steps {
-                sh 'if [ "$ENV_VARIABLE" != "Value for execution" ]; then exit 1; fi'
+                sh 'if [ "$ENV_VARIABLE" != "Value for build" ]; then exit 1; fi'
             }
         }
     }
